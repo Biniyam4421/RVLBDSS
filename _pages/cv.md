@@ -10,20 +10,41 @@ redirect_from:
 {% include base_path %}
 
 
-Education
-======
 
-Work experience
-======
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Display a globe on a webpage</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+        <style>
+            body { margin: 0; padding: 0; }
+            #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
 
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYmluaXlhbXNpc2hhaCIsImEiOiJjbGUwM3J2ZXQwN2x6M25xamRnZ3F2bm5kIn0.AJkpzq7hl9xY3uVa6OuU2A';
+            const map = new mapboxgl.Map({
+                container: 'map',
+                // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+                style: 'mapbox://styles/mapbox/satellite-streets-v11',
+                zoom: 1.5,
+                center: [30, 50],
+                projection: 'globe'
+            });
 
+            map.on('load', () => {
+                // Set the default atmosphere style
+                map.setFog({});
+            });
+        </script>
 
-Awards
-======
-
-  
-Service and leadership
-======
+    </body>
+</html>
 
 
 
