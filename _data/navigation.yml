@@ -15,8 +15,8 @@ main:
   - title: "youtube"
     url: /portfolio/  
     
-#  - title: "CV"
-#    url: /cv/
+  - title: "RVLBDSS"
+    url: /cv/
     
   - title: "Contacts"
     url: /markdown/
